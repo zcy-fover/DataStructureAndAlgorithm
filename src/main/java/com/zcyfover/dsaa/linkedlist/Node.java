@@ -5,34 +5,41 @@ package com.zcyfover.dsaa.linkedlist;
  * @description 链表节点
  * @date 2019-10-15 21:17
  */
-public class Node {
+public class Node<T> {
 
     /**
      * 数据节点 value
      */
-    private String value;
+    private T value;
 
     /**
      * 前继节点
      */
-    private Node prevNode;
+    private Node<T> prevNode;
 
     /**
      * 后继节点
      */
-    private Node nextNode;
+    private Node<T> nextNode;
 
-    public Node(String value, Node prevNode, Node nextNode) {
+    public Node() {
+    }
+
+    public Node(T value) {
+        this.value = value;
+    }
+
+    public Node(T value, Node prevNode, Node nextNode) {
         this.value = value;
         this.prevNode = prevNode;
         this.nextNode = nextNode;
     }
 
-    public String getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
