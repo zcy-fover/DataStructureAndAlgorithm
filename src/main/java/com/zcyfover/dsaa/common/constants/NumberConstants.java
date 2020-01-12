@@ -1,4 +1,4 @@
-package com.zcyfover.dsaa.common;
+package com.zcyfover.dsaa.common.constants;
 
 /**
  * @author zcy-fover

@@ -1,7 +1,7 @@
 package com.zcyfover.dsaa.stack;
 
-import com.zcyfover.dsaa.common.NumberConstants;
-import com.zcyfover.dsaa.common.StringConstants;
+import com.zcyfover.dsaa.common.constants.NumberConstants;
+import com.zcyfover.dsaa.common.constants.StringConstants;
 
 /**
  * @author zcy-fover
