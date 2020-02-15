@@ -12,11 +12,14 @@ public class SortMain {
     private static int[] sortedSource = {1, 2, 3, 4, 5, 6};
 
     public static void main(String[] args) {
-//        Sort sort = nww BubbleSort();
+        Sort sort;
+//        sort = new BubbleSort();
 //        sort.betterSort(sortedSource);
-//        Sort sort = new InsertSort();
+//        sort = new InsertSort();
 //        sort.sort(source);
-        Sort sort = new SelectSort();
+//        sort = new SelectSort();
+//        sort.sort(source);
+        sort = new MergeSort();
         sort.sort(source);
     }
 
