@@ -21,6 +21,9 @@ public abstract class Sort {
     }
 
     void swap(int[] arrays, int i, int j) {
+        if (i == j) {
+            return;
+        }
         arrays[i] = arrays[i] ^ arrays[j];
         arrays[j] = arrays[i] ^ arrays[j];
         arrays[i] = arrays[i] ^ arrays[j];

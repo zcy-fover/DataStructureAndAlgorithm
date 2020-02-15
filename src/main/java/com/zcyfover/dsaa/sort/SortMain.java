@@ -8,6 +8,7 @@ package com.zcyfover.dsaa.sort;
 public class SortMain {
 
     private static int[] source = {2, 4, 9, 4, 3, 1, 5, 6};
+    private static int[] sourceTwo = {2, 4, 9, 4, 3, 1, 5, 6};
 
     private static int[] sortedSource = {1, 2, 3, 4, 5, 6};
 
@@ -19,8 +20,11 @@ public class SortMain {
 //        sort.sort(source);
 //        sort = new SelectSort();
 //        sort.sort(source);
-        sort = new MergeSort();
+//        sort = new MergeSort();
+//        sort.sort(source);
+        sort = new QuickSort();
         sort.sort(source);
+        sort.betterSort(sourceTwo);
     }
 
 }
