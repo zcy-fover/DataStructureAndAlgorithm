@@ -26,7 +26,10 @@ public class SortMain {
 //        sort = new QuickSort();
 //        sort.sort(source);
 //        sort.betterSort(sourceTwo);
-        sort = new BucketSort();
+//        sort = new BucketSort();
+//        sort.sort(source);
+//        sort.betterSort(sourceTwo);
+        sort = new CountingSort();
         sort.sort(source);
         sort.betterSort(sourceTwo);
     }
