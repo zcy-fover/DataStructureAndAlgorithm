@@ -15,6 +15,7 @@ public class SortMain {
     public static void main(String[] args) {
         Sort sort;
 //        sort = new BubbleSort();
+//        sort.sort(source);
 //        sort.betterSort(sortedSource);
 //        sort = new InsertSort();
 //        sort.sort(source);
@@ -22,7 +23,10 @@ public class SortMain {
 //        sort.sort(source);
 //        sort = new MergeSort();
 //        sort.sort(source);
-        sort = new QuickSort();
+//        sort = new QuickSort();
+//        sort.sort(source);
+//        sort.betterSort(sourceTwo);
+        sort = new BucketSort();
         sort.sort(source);
         sort.betterSort(sourceTwo);
     }
