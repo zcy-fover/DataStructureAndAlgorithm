@@ -7,7 +7,7 @@ package com.zcyfover.dsaa.sort;
  */
 public class SortMain {
 
-    private static int[] source = {2, 4, 9, 4, 3, 1, 5, 6};
+    private static int[] source = {2, 4, 22, 9, 4, 7898, 3, 1, 5, 6, 10, 439};
     private static int[] sourceTwo = {2, 4, 9, 4, 3, 1, 5, 6};
 
     private static int[] sortedSource = {1, 2, 3, 4, 5, 6};
@@ -29,9 +29,11 @@ public class SortMain {
 //        sort = new BucketSort();
 //        sort.sort(source);
 //        sort.betterSort(sourceTwo);
-        sort = new CountingSort();
-        sort.sort(source);
-        sort.betterSort(sourceTwo);
+//        sort = new CountingSort();
+//        sort.sort(source);
+//        sort.betterSort(sourceTwo);
+//        sort = new RadixSort();
+//        sort.sort(source);
     }
 
 }

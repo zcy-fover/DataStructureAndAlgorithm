@@ -20,6 +20,30 @@ public abstract class Sort {
         System.out.println(Arrays.toString(arrays));
     }
 
+    int getMax(int[] arrays) {
+        int max = 0;
+        for (int element : arrays) {
+            if (max < element) {
+                max = element;
+            }
+        }
+        return max;
+    }
+
+    /**
+     * 将source的元素复制到target中
+     * @param source 原数组
+     * @param target 目标数组
+     */
+    void copy(int[] source, int[] target) {
+        if (source.length != target.length) {
+            return;
+        }
+        for (int i = 0; i < source.length; i++) {
+            target[i] = source[i];
+        }
+    }
+
     void swap(int[] arrays, int i, int j) {
         if (i == j) {
             return;

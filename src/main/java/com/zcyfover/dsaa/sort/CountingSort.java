@@ -59,18 +59,8 @@ public class CountingSort extends Sort {
             result[index] = arrays[i];
             countArray[arrays[i]]--;
         }
-        arrays = result;
+        copy(result, arrays);
         print(arrays);
-    }
-
-    private int getMax(int[] arrays) {
-        int max = 0;
-        for (int element : arrays) {
-            if (max < element) {
-                max = element;
-            }
-        }
-        return max;
     }
 
 }
