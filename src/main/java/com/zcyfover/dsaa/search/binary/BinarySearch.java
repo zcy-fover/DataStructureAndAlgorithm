@@ -209,20 +209,22 @@ public class BinarySearch {
                 return index + low;
             } else {
                 int[] tempArray = Arrays.copyOfRange(array, mid, high + 1);
-                return searchProcess(tempArray, element, mid);
+                int result = binarySearchSeven(tempArray, element);
+                if (result != NumberConstants.MINUS_ONE) {
+                    return mid + result;
+                }
+                return NumberConstants.MINUS_ONE;
             }
         } else {
-            int[] tempArray = Arrays.copyOfRange(array, mid, high + 1);
-            return searchProcess(tempArray, element, mid);
+            int[] newArray = Arrays.copyOfRange(array, mid + 1, high + 1);
+            int index = binarySearchOne(newArray, element);
+            if (index != NumberConstants.MINUS_ONE) {
+                return index + mid + 1;
+            } else {
+                int[] tempArray = Arrays.copyOfRange(array, low, mid + 1);
+                return binarySearchSeven(tempArray, element);
+            }
         }
-    }
-
-    private int searchProcess(int[] array, int element, int mid) {
-        int result = binarySearchSeven(array, element);
-        if (result != NumberConstants.MINUS_ONE) {
-            return mid + result;
-        }
-        return NumberConstants.MINUS_ONE;
     }
 
 }
