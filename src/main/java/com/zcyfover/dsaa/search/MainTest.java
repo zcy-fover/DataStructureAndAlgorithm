@@ -15,7 +15,7 @@ public class MainTest {
     public static void main(String[] args) {
         BinarySearch binarySearch = new BinarySearch();
 //        int index = binarySearch.binarySearchOne(TEST, 1);
-        int index = binarySearch.binarySearchSeven(SOURCE, 3);
+        int index = binarySearch.binarySearchEight(SOURCE, 3);
         System.out.println(index);
     }
 

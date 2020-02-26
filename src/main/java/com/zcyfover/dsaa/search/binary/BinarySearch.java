@@ -232,4 +232,43 @@ public class BinarySearch {
         }
     }
 
+    /**
+     * 在一个循环有序数组中二分查找 element 的元素的位置
+     *    将数组二分，如果首元素小于中间元素，则前半部分有序，判断 element 是否在该区间
+     *                                 对于无序的部分，继续二分查找
+     *              如果首元素大于中间元素，则后半部分有序，判断 element 是否在该区间
+     *                                 对于无序的部分，继续二分查找
+     * array ：[2, 3, 4, 5, 6, 1]
+     * @param array 原有序数组
+     * @param element 目标元素
+     * @return 返回目标元素在数组中的索引
+     */
+    public int binarySearchEight(int[] array, int element) {
+        if (ArrayUtils.isEmpty(array)) {
+            return NumberConstants.MINUS_ONE;
+        }
+        //首先二分寻找最小元素的位置
+        int low = 0, high = array.length - 1;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (element == array[mid]) {
+                return mid;
+            }
+            if (array[low] <= array[mid]) {
+                if (array[low] <= element && element <= array[mid]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            } else {
+                if (array[mid] <= element && element <= array[high]) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+        }
+        return NumberConstants.MINUS_ONE;
+    }
+
 }
