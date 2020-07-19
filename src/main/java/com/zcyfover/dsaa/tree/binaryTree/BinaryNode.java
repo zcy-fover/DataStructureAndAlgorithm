@@ -7,52 +7,53 @@ import java.util.Queue;
  * Created by zcy-fover on 2016/10/4.
  * 树的学习，重点以二叉树的学习为主，此类为二叉树的节点实现
  */
-public class BinaryNode<DataType extends Comparable<? super DataType>>{
+public class BinaryNode<T extends Comparable<? super T>>{
 
-    private DataType element;
-    private BinaryNode<DataType> left;
-    private BinaryNode<DataType> right;
+    private T element;
+    private BinaryNode<T> left;
+    private BinaryNode<T> right;
 
     public BinaryNode(){
     }
 
-    public BinaryNode(DataType element) {
+    public BinaryNode(T element) {
         this(element, null, null);
     }
 
-    public BinaryNode(DataType element, BinaryNode<DataType> left, BinaryNode<DataType> right) {
+    public BinaryNode(T element, BinaryNode<T> left, BinaryNode<T> right) {
         this.element = element;
         this.left = left;
         this.right = right;
     }
 
-    public DataType getElement() {
+    public T getElement() {
         return element;
     }
 
-    public void setElement(DataType element) {
+    public void setElement(T element) {
         this.element = element;
     }
 
-    public BinaryNode<DataType> getLeft() {
+    public BinaryNode<T> getLeft() {
         return left;
     }
 
-    public void setLeft(BinaryNode<DataType> left) {
+    public void setLeft(BinaryNode<T> left) {
         this.left = left;
     }
 
-    public BinaryNode<DataType> getRight() {
+    public BinaryNode<T> getRight() {
         return right;
     }
 
-    public void setRight(BinaryNode<DataType> right) {
+    public void setRight(BinaryNode<T> right) {
         this.right = right;
     }
 
-    public BinaryNode<DataType> insert(DataType x, BinaryNode<DataType> t){
-        if (t == null){ //说明该节点为根
-            return new BinaryNode<DataType>(x, null, null);
+    public BinaryNode<T> insert(T x, BinaryNode<T> t){
+        //说明该节点为根
+        if (t == null){
+            return new BinaryNode<T>(x, null, null);
         }
 
         int compareResult = x.compareTo(t.getElement());

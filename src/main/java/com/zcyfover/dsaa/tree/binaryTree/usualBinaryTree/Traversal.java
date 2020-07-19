@@ -18,32 +18,32 @@ public class Traversal {
     /**
      * 先序遍历
      */
-    public void preorderTraversalRec(BinaryNode root) {
+    public void preOrderTraversalRec(BinaryNode root) {
         if (root != null) {
             System.out.print(root.getElement() + "-");
-            preorderTraversalRec(root.getLeft());
-            preorderTraversalRec(root.getRight());
+            preOrderTraversalRec(root.getLeft());
+            preOrderTraversalRec(root.getRight());
         }
     }
 
     /**
      * 中序遍历
      */
-    public void inorderTraversalRec(BinaryNode root) {
+    public void inOrderTraversalRec(BinaryNode root) {
         if (root != null) {
-            inorderTraversalRec(root.getLeft());
+            inOrderTraversalRec(root.getLeft());
             System.out.print(root.getElement() + "-");
-            inorderTraversalRec(root.getRight());
+            inOrderTraversalRec(root.getRight());
         }
     }
 
     /**
      * 后序遍历
      */
-    public void postorderTraversalRec(BinaryNode root) {
+    public void postOrderTraversalRec(BinaryNode root) {
         if (root != null) {
-            postorderTraversalRec(root.getLeft());
-            postorderTraversalRec(root.getRight());
+            postOrderTraversalRec(root.getLeft());
+            postOrderTraversalRec(root.getRight());
             System.out.print(root.getElement() + "-");
         }
     }
@@ -52,7 +52,7 @@ public class Traversal {
      * 二叉树的遍历，非递归实现  **
      *************************/
     //先序遍历
-    public void preorderTraversal(BinaryNode root) {
+    public void preOrderTraversal(BinaryNode root) {
         Stack<BinaryNode> stack = new Stack<>();
         BinaryNode current = root;
         while (current != null || !stack.empty()){
@@ -68,7 +68,7 @@ public class Traversal {
     }
 
     //中序遍历
-    public void inorderTraversal(BinaryNode root) {
+    public void inOrderTraversal(BinaryNode root) {
         Stack<BinaryNode> stack = new Stack<>();
         BinaryNode current = root;
         while (current != null || !stack.empty()) {
@@ -89,7 +89,7 @@ public class Traversal {
      * 即：先遍历根节点，然后遍历右孩子，最后遍历左孩子。
      * @param root
      */
-    public void postorderTraversal(BinaryNode root) {
+    public void postOrderTraversal(BinaryNode root) {
         Stack<BinaryNode> stack = new Stack<>();
         Stack<BinaryNode> outStack = new Stack<>();
         BinaryNode current = root;
@@ -109,7 +109,7 @@ public class Traversal {
     }
 
     //层次遍历
-    public void layerorder(BinaryNode root) {
+    public void layerOrder(BinaryNode root) {
         LinkedList<BinaryNode> queue = new LinkedList<>();
         queue.addLast(root);
         BinaryNode<Integer> current = null;

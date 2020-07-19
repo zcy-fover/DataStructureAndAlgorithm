@@ -17,9 +17,9 @@ public class Test {
         }
 
         Traversal traversal = new Traversal();
-        traversal.preorderTraversal(root);
+        traversal.preOrderTraversal(root);
         System.out.println();
-        traversal.inorderTraversal(root);
+        traversal.inOrderTraversal(root);
 
         System.out.println();
         System.out.println(root.getDepth(root));

@@ -16,28 +16,28 @@ public class Test {
         Traversal traversal = new Traversal();
         System.out.println("递归遍历输出：");
         System.out.print("    先序遍历：");
-        traversal.preorderTraversalRec(root);
+        traversal.preOrderTraversalRec(root);
         System.out.println();
         System.out.print("    中序遍历：");
-        traversal.inorderTraversalRec(root);
+        traversal.inOrderTraversalRec(root);
         System.out.println();
         System.out.print("    后序遍历：");
-        traversal.postorderTraversalRec(root);
+        traversal.postOrderTraversalRec(root);
         System.out.println();
 
         System.out.println("非递归遍历输出：");
         System.out.print("    先序遍历：");
-        traversal.preorderTraversal(root);
+        traversal.preOrderTraversal(root);
         System.out.println();
         System.out.print("    中序遍历：");
-        traversal.inorderTraversal(root);
+        traversal.inOrderTraversal(root);
         System.out.println();
         System.out.print("    后序遍历：");
-        traversal.postorderTraversal(root);
+        traversal.postOrderTraversal(root);
 
         System.out.println();
         System.out.println("层次遍历输出：");
-        traversal.layerorder(root);
+        traversal.layerOrder(root);
 
         System.out.println();
         System.out.println(root.getDepthRec(root));

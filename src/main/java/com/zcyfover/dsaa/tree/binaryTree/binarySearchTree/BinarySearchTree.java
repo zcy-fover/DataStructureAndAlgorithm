@@ -23,6 +23,7 @@ public class BinarySearchTree<DataType  extends Comparable<? super DataType>> ex
      * @param t
      * @return
      */
+    @Override
     public BinaryNode<DataType> insert(DataType x, BinaryNode<DataType> t){
         if (t == null){ //说明该节点为根
             return new BinaryNode<DataType>(x, null, null);
